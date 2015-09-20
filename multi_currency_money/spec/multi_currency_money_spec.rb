@@ -8,4 +8,8 @@ describe 'Multi-Currency Money' do
     product = five.times(3)
     expect(product.amount).to eq(15)
   end
+
+  it 'supports equality' do
+    expect(Dollar.new(5)).to eq(Dollar.new(5))
+  end
 end
