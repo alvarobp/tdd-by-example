@@ -9,6 +9,11 @@ class Money
     Franc.new(amount, 'CHF')
   end
 
+  def initialize(amount, currency)
+    @amount = amount
+    @currency = currency
+  end
+
   def times
     raise 'Implement in subclass'
   end
