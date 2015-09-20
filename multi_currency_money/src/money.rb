@@ -6,7 +6,7 @@ class Money
   end
 
   def self.franc(amount)
-    Franc.new(amount)
+    Franc.new(amount, nil)
   end
 
   def times
