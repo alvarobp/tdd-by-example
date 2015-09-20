@@ -6,7 +6,7 @@ class Money
   end
 
   def self.franc(amount)
-    Franc.new(amount, 'CHF')
+    Money.new(amount, 'CHF')
   end
 
   def initialize(amount, currency)
