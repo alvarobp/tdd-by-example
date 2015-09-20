@@ -6,8 +6,4 @@ class Franc < Money
   def times(multiplier)
     Franc.new(@amount * multiplier)
   end
-
-  def ==(other)
-    amount == other.amount
-  end
 end
