@@ -1,5 +1,4 @@
 require_relative '../src/money'
-require_relative '../src/franc'
 
 describe 'Multi-Currency Money' do
   it 'supports multiplication' do
@@ -12,10 +11,6 @@ describe 'Multi-Currency Money' do
     expect(Money.dollar(5)).to eq(Money.dollar(5))
     expect(Money.dollar(5)).not_to eq(Money.dollar(6))
     expect(Money.franc(5)).not_to eq(Money.dollar(5))
-  end
-
-  it 'supports equality between different classes' do
-    expect(Money.new(10, 'CHF')).to eq(Franc.new(10, 'CHF'))
   end
 
   it 'supports franc multiplication' do
