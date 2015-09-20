@@ -7,6 +7,10 @@ class Money
     Franc.new(amount)
   end
 
+  def currency
+    raise 'Implement in subclass'
+  end
+
   def times
     raise 'Implement in subclass'
   end
