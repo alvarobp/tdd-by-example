@@ -1,10 +1,9 @@
 class Dollar < Money
+  attr_reader :currency
+
   def initialize(amount)
     @amount = amount
-  end
-
-  def currency
-    'USD'
+    @currency = 'USD'
   end
 
   def times(multiplier)
