@@ -1,6 +1,4 @@
 class Dollar < Money
-  attr_reader :currency
-
   def initialize(amount)
     @amount = amount
     @currency = 'USD'
