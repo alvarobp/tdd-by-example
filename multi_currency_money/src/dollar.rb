@@ -3,6 +3,10 @@ class Dollar < Money
     @amount = amount
   end
 
+  def currency
+    'USD'
+  end
+
   def times(multiplier)
     Dollar.new(@amount * multiplier)
   end
