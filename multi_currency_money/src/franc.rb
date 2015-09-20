@@ -1,5 +1,5 @@
 class Franc < Money
-  def initialize(amount)
+  def initialize(amount, currency)
     @amount = amount
     @currency = 'CHF'
   end
