@@ -1,2 +1,0 @@
-class Dollar < Money
-end
