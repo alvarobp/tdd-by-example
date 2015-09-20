@@ -1,3 +1,4 @@
+require_relative '../src/money'
 require_relative '../src/dollar'
 require_relative '../src/franc'
 
