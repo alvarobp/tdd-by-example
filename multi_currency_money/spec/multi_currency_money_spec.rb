@@ -12,6 +12,8 @@ describe 'Multi-Currency Money' do
   it 'supports equality' do
     expect(Dollar.new(5)).to eq(Dollar.new(5))
     expect(Dollar.new(5)).not_to eq(Dollar.new(6))
+    expect(Franc.new(5)).to eq(Franc.new(5))
+    expect(Franc.new(5)).not_to eq(Franc.new(6))
   end
 
   it 'supports franc multiplication' do
