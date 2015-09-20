@@ -14,8 +14,8 @@ class Money
     @currency = currency
   end
 
-  def times
-    raise 'Implement in subclass'
+  def times(multiplier)
+    Money.new(@amount * multiplier, currency)
   end
 
   def ==(other)
