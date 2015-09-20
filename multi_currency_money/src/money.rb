@@ -3,6 +3,10 @@ class Money
     Dollar.new(amount)
   end
 
+  def times
+    raise 'Implement in subclass'
+  end
+
   def ==(other)
     amount == other.amount &&
       self.class == other.class
