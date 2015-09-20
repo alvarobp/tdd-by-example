@@ -4,7 +4,7 @@ require_relative '../src/franc'
 
 describe 'Multi-Currency Money' do
   it 'supports multiplication' do
-    five = Dollar.new(5)
+    five = Money.dollar(5)
     expect(five.times(2)).to eq(Dollar.new(10))
     expect(five.times(3)).to eq(Dollar.new(15))
   end
