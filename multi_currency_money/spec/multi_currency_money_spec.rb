@@ -11,4 +11,10 @@ describe 'Multi-Currency Money' do
     expect(Dollar.new(5)).to eq(Dollar.new(5))
     expect(Dollar.new(5)).not_to eq(Dollar.new(6))
   end
+
+  it 'supports franc multiplication' do
+    five = Franc.new(5)
+    expect(five.times(2), Franc.new(10))
+    expect(five.times(3), Franc.new(15))
+  end
 end
