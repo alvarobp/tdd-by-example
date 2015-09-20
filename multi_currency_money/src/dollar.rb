@@ -1,4 +1,4 @@
-class Dollar
+class Dollar < Money
   def initialize(amount)
     @amount = amount
   end
