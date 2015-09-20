@@ -17,6 +17,10 @@ describe 'Multi-Currency Money' do
     expect(Money.franc(5)).not_to eq(Money.dollar(5))
   end
 
+  it 'supports equality between different classes' do
+    expect(Money.new(10, 'CHF')).to eq(Franc.new(10, 'CHF'))
+  end
+
   it 'supports franc multiplication' do
     five = Money.franc(5)
     expect(five.times(2)).to eq(Money.franc(10))
