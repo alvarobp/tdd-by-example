@@ -1,4 +1,8 @@
+require_relative 'expression'
+
 class Money
+  include Expression
+
   attr_reader :currency
 
   def self.dollar(amount)
