@@ -34,4 +34,11 @@ describe 'Multi-Currency Money' do
     expect(sum.augend).to eq(five)
     expect(sum.addend).to eq(five)
   end
+
+  it 'supports reduced addition' do
+    sum = Sum.new(Money.dollar(3), Money.dollar(4))
+    bank = Bank.new
+    result = bank.reduce(sum, 'USD')
+    expect(result).to eq(Money.dollar(7))
+  end
 end
