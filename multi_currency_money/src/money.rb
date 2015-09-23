@@ -27,6 +27,5 @@ class Money
       currency == other.currency
   end
 
-  protected
   attr_reader :amount
 end
