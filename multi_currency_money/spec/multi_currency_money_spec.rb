@@ -1,5 +1,6 @@
 require_relative '../src/money'
 require_relative '../src/bank'
+require_relative '../src/sum'
 
 describe 'Multi-Currency Money' do
   it 'supports multiplication' do
