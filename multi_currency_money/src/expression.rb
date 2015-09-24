@@ -1,5 +1,5 @@
 module Expression
-  def reduce(to)
+  def reduce(bank, to)
     raise 'Not implemented'
   end
 end
