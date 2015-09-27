@@ -3,6 +3,10 @@ module Expression
     raise 'Not implemented'
   end
 
+  def times(multiplier)
+    raise 'Not implemented'
+  end
+
   def reduce(bank, to)
     raise 'Not implemented'
   end
