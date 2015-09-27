@@ -83,9 +83,4 @@ describe 'Multi-Currency Money' do
     result = bank.reduce(sum, 'USD')
     expect(result).to eq(Money.dollar(20))
   end
-
-  it 'returns Money from plus with same currency' do
-    sum = Money.dollar(1).plus(Money.dollar(2))
-    expect(sum).to be_a(Money)
-  end
 end
