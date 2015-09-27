@@ -11,6 +11,7 @@ class Sum
   end
 
   def plus(addend)
+    Sum.new(self, addend)
   end
 
   def reduce(bank, to)
