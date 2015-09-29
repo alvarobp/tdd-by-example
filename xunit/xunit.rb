@@ -6,6 +6,7 @@ class WasRun
   end
 
   def test_method
+    @was_run = true
   end
 end
 
