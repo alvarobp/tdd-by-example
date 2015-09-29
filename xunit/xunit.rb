@@ -3,6 +3,7 @@ class WasRun
 
   def initialize(name)
     @was_run = false
+    @name = name
   end
 
   def test_method
@@ -10,7 +11,7 @@ class WasRun
   end
 
   def run
-    test_method
+    public_send(@name)
   end
 end
 
