@@ -1,3 +1,7 @@
+def assert(test)
+  raise 'AssertionFailed' unless test
+end
+
 class TestCase
   def initialize(name)
     @name = name
@@ -24,9 +28,9 @@ end
 class TestCaseTest < TestCase
   def test_running
     test = WasRun.new('test_method')
-    raise 'Expected false' if test.was_run
+    assert !test.was_run
     test.run
-    raise 'Expected true' if !test.was_run
+    assert test.was_run
   end
 end
 
