@@ -1,4 +1,7 @@
-class WasRun
+class TestCase
+end
+
+class WasRun < TestCase
   attr_reader :was_run
 
   def initialize(name)
