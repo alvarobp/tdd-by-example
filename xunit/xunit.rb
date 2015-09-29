@@ -4,6 +4,9 @@ class WasRun
   def initialize(name)
     @was_run = false
   end
+
+  def test_method
+  end
 end
 
 test = WasRun.new('test_method')
