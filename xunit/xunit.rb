@@ -1,4 +1,9 @@
 class WasRun
+  attr_reader :was_run
+
+  def initialize(name)
+    @was_run = false
+  end
 end
 
 test = WasRun.new('test_method')
