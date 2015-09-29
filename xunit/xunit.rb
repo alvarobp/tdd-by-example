@@ -8,6 +8,10 @@ class WasRun
   def test_method
     @was_run = true
   end
+
+  def run
+    test_method
+  end
 end
 
 test = WasRun.new('test_method')
