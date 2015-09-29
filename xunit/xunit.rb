@@ -2,6 +2,10 @@ class TestCase
   def initialize(name)
     @name = name
   end
+
+  def run
+    public_send(@name)
+  end
 end
 
 class WasRun < TestCase
@@ -14,10 +18,6 @@ class WasRun < TestCase
 
   def test_method
     @was_run = true
-  end
-
-  def run
-    public_send(@name)
   end
 end
 
