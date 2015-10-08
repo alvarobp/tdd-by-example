@@ -13,6 +13,7 @@ class TestCase
   def run
     setup
     public_send(@name)
+    tear_down
   end
 end
 
@@ -29,6 +30,10 @@ class WasRun < TestCase
 
   def test_method
     @log = @log + 'test_method '
+  end
+
+  def tear_down
+    @log = @log + 'tear_down '
   end
 end
 
