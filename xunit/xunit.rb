@@ -34,16 +34,18 @@ class WasRun < TestCase
 end
 
 class TestCaseTest < TestCase
+  def setup
+    @test = WasRun.new('test_method')
+  end
+
   def test_running
-    test = WasRun.new('test_method')
-    test.run
-    assert test.was_run
+    @test.run
+    assert @test.was_run
   end
 
   def test_setup
-    test = WasRun.new('test_method')
-    test.run
-    assert test.was_setup
+    @test.run
+    assert @test.was_setup
   end
 end
 
