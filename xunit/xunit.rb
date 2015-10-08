@@ -7,7 +7,11 @@ class TestCase
     @name = name
   end
 
+  def setup
+  end
+
   def run
+    setup
     public_send(@name)
   end
 end
