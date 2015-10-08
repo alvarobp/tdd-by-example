@@ -17,7 +17,7 @@ class TestCase
 end
 
 class WasRun < TestCase
-  attr_reader :was_run, :was_setup, :log
+  attr_reader :was_run, :log
 
   def initialize(name)
     super(name)
@@ -25,12 +25,12 @@ class WasRun < TestCase
 
   def setup
     @was_run = false
-    @was_setup = true
     @log = 'setup '
   end
 
   def test_method
     @was_run = true
+    @log = @log + 'test_method '
   end
 end
 
