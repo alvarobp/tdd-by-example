@@ -33,13 +33,10 @@ class WasRun < TestCase
 end
 
 class TestCaseTest < TestCase
-  def setup
-    @test = WasRun.new('test_method')
-  end
-
   def test_template_method
-    @test.run
-    assert 'setup test_method ' == @test.log
+    test = WasRun.new('test_method')
+    test.run
+    assert 'setup test_method ' == test.log
   end
 end
 
