@@ -36,7 +36,6 @@ end
 class TestCaseTest < TestCase
   def test_running
     test = WasRun.new('test_method')
-    assert !test.was_run
     test.run
     assert test.was_run
   end
