@@ -46,7 +46,7 @@ class TestCaseTest < TestCase
 
   def test_setup
     @test.run
-    assert 'setup ' == @test.log
+    assert 'setup test_method ' == @test.log
   end
 end
 
