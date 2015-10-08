@@ -15,6 +15,9 @@ class TestCase
     public_send(@name)
     tear_down
   end
+
+  def tear_down
+  end
 end
 
 class WasRun < TestCase
