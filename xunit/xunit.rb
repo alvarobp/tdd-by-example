@@ -33,7 +33,11 @@ class TestCase
     result = TestResult.new
     result.test_started
     setup
-    public_send(@name)
+    begin
+      public_send(@name)
+    rescue
+      result.test_failed
+    end
     tear_down
     result
   end
