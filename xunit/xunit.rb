@@ -96,3 +96,4 @@ end
 TestCaseTest.new('test_template_method').run
 TestCaseTest.new('test_result').run
 TestCaseTest.new('test_failed_result_formatting').run
+TestCaseTest.new('test_failed_result').run
