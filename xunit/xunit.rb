@@ -2,6 +2,12 @@ def assert(test)
   raise 'AssertionFailed' unless test
 end
 
+class TestResult
+  def summary
+    '1 run, 0 failed'
+  end
+end
+
 class TestCase
   def initialize(name)
     @name = name
@@ -14,6 +20,7 @@ class TestCase
     setup
     public_send(@name)
     tear_down
+    TestResult.new
   end
 
   def tear_down
