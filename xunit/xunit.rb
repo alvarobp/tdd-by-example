@@ -4,7 +4,11 @@ end
 
 class TestResult
   def initialize
-    @run_count = 1
+    @run_count = 0
+  end
+
+  def test_started
+    @run_count += 1
   end
 
   def summary
@@ -21,10 +25,12 @@ class TestCase
   end
 
   def run
+    result = TestResult.new
+    result.test_started
     setup
     public_send(@name)
     tear_down
-    TestResult.new
+    result
   end
 
   def tear_down
