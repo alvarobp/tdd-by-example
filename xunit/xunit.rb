@@ -95,9 +95,18 @@ class TestCaseTest < TestCase
     result.test_failed
     assert '1 run, 1 failed' == result.summary
   end
+
+  def test_suite
+    suite = TestSuite.new
+    suite.add(WasRun.new('test_method'))
+    suite.add(WasRun.new('test_broken_method'))
+    result = suite.run
+    assert '2 run, 1 failed' == result.summary
+  end
 end
 
 puts TestCaseTest.new('test_template_method').run.summary
 puts TestCaseTest.new('test_result').run.summary
 puts TestCaseTest.new('test_failed_result_formatting').run.summary
 puts TestCaseTest.new('test_failed_result').run.summary
+puts TestCaseTest.new('test_suite').run.summary
